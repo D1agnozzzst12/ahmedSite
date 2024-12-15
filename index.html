@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исламский магазин ANFF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <div class="logo-container">
+                <img src="Image/anaasif books.jpg" alt="ANFF Logo" class="logo">
+                <span class="logo-text">ANFF</span>
+            </div>
+
+            <!-- Меню для компьютеров -->
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#categories">Категории</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <!-- Бургер-меню -->
+            <div class="menu mobile-menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <div class="menu-panel">
+                    <ul class="menu-list">
+                        <li><a href="#categories" class="menu-item">Категории</a></li>
+                        <li><a href="#catalog" class="menu-item">Каталог</a></li>
+                        <li><a href="#contacts" class="menu-item">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Поиск -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Поиск товаров..." class="search-box">
+        <img src="Image/icon/search.svg" alt="Поиск" class="search-icon">
+    </div>
+    
+
+    <!-- Категории -->
+    <section id="categories">
+        <div class="container">
+            <h2>Категории товаров</h2>
+            <div class="categories">
+                <div class="category-card" data-category="Все">
+                    <img src="Image/Все.jpg" alt="Все товары">
+                    <h3>Все</h3>
+                </div>
+                <div class="category-card" data-category="Книги">
+                    <img src="Image/Книги/Смягчение сердец Кораном.jpg" alt="Книги">
+                    <h3>Книги</h3>
+                </div>
+                <div class="category-card" data-category="Лекарства">
+                    <img src="image/Медицина/OCEAN_CAPILLUS_WOMEN.jpg" alt="Лекарства">
+                    <h3>Лекарства</h3>
+                </div>
+                <div class="category-card" data-category="Часы">
+                    <img src="Image/Часы/Аль-Харамен1.jpg" alt="Часы">
+                    <h3>Часы</h3>
+                </div>
+                <div class="category-card" data-category="Парфюм">
+                    <img src="Image/BooksPhoto.jpg" alt="Парфюм">
+                    <h3>Парфюм</h3>
+                </div>
+                <div class="category-card" data-category="Подарки">
+                    <img src="Image/anaasif_logo.png" alt="Подарки">
+                    <h3>Подарки</h3>
+                </div>
+                <div class="category-card" data-category="Одежда">
+                    <a href="clothes.html"></a>
+                        <img src="Image/Одежда/1.jpg" alt="Одежда">
+                        <h3>Одежда</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog">
+        <div class="container">
+            <h2>Наши товары</h2>
+            <div id="product-container" class="products">
+                <!-- Товары -->
+                <div id="product-1" class="product-card" data-category="Книги">
+                    <span class="product-label new">НОВИНКА</span> <!-- Ярлык "НОВИНКА" -->
+                    <img src="Image/Книги/Смягчение сердец Кораном.jpg" alt="Книга 1" onclick="openModal(0)">
+                    <small class="category-label">Книги</small>
+                    <a href="/index.html#product-1" class="card-link">
+                        <h3>Книга 1</h3>
+                    </a>
+                    <p>Описание книги 1.</p>
+                    <span class="price">500 ₽</span>
+                    <button 
+                        class="buy-button" 
+                        data-name="Книга 1" 
+                        data-url="http://localhost/product-1">
+                        Купить
+                    </button>
+                    <button 
+                        class="more-button"
+                        onclick="openModal(0)"
+                        >
+                        ПОДРОБНЕЕ
+                    </button>
+                </div>
+                <div class="product-card" data-category="Часы">
+                    <span class="product-label discount">СКИДКА</span> <!-- Ярлык "СКИДКА" -->
+                    <img src="Image/Книги/Смягчение сердец Кораном.jpg" alt="Книга 1" onclick="openModal(1)">
+                    <small class="category-label">Часы</small>
+                    <h3>Часы 1</h3>
+                    <p>Описание часов 1.</p>
+                    <span class="price">1500 ₽</span>
+                    <button class="buy-button">Купить</button>
+                </div>
+                <div class="product-card" data-category="Парфюм">
+                    <span class="product-label sale">АКЦИЯ</span> <!-- Ярлык "АКЦИЯ" -->
+                    <img src="Image/Книги/Смягчение сердец Кораном.jpg" alt="Книга 1" onclick="openModal(2)">
+                    <small class="category-label">Парфюм</small>
+                    <h3>Парфюм 1</h3>
+                    <p>Описание парфюма 1.</p>
+                    <span class="price">1200 ₽</span>
+                    <button 
+                        class="buy-button" 
+                        data-name="Книга 1" 
+                        data-url="https://anff.ru/product-1">
+                        Купить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            
+            <span class="modal-close">&times;</span>
+            <span class="modal-img-close">&times;</span>
+            <div class="modal-gallery">
+                
+                <button class="gallery-nav prev">&lt;</button>
+                <img id="modal-image" src="" alt="Product Image">
+                <button class="gallery-nav next">&gt;</button>
+            </div>
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <span id="modal-price" class="price"></span>
+                <button id="modal-buy-button" class="buy-button">Купить</button>
+            </div>
+        </div>
+    </div>
+    
+<!-- 
+    Модальное окно для галереи
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-gallery">
+                <button class="gallery-nav prev">&lt;</button>
+                <img id="modal-image" src="" alt="Product Image">
+                <button class="gallery-nav next">&gt;</button>
+            </div>
+            <div class="modal-details">
+                <h3 id="modal-title">Название товара</h3>
+                <p id="modal-description">Полное описание товара.</p>
+                <span id="modal-price" class="price">Цена</span>
+                <button id="modal-buy-button" class="buy-button">Купить</button>
+            </div>
+        </div>
+    </div> -->
+    
+
+    <!-- Контакты -->
+    <section id="contacts">
+        <div class="container contacts-section">
+            <h2>Контакты</h2>
+            <div class="contacts-content">
+                <!-- Карта -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.000!2d44.8429!3d43.2153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404d99!2sТЦ%20«КОРОНА%203»!5e0!3m2!1sen!2sru!4v1234567890"
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+    
+                <!-- Информация -->
+                <div class="contacts-info">
+                    <p class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Республика Ингушетия, г. Назрань, ТЦ «КОРОНА 3», 2 этаж, 12 магазин
+                    </p>
+                    <p>
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/79390060606" target="_blank">WhatsApp: +7 939 006 0606</a>
+                    </p>
+                    <p>
+                        <i class="fab fa-telegram"></i>
+                        <a href="https://t.me/anaasif" target="_blank">Telegram: t.me/anaasif</a>
+                    </p>
+                    <p>
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://instagram.com/anaaasifff" target="_blank">Instagram: instagram.com/anaaasifff</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Исламский магазин ANFF. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+45.144.175.163
+1c:1b:0d:d0:6f:56
